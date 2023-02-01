@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.countryBack {
+    background-image: linear-gradient(to right, #ffffff, #f6f5fd, #f6f5fd, #f6f5fd, #e5e0f8, #dcd6f6, #dcd6f6, #f6f5fd, #f6f5fd, #f6f5fd, #f6f5fd, #ffffff);
+}

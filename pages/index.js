@@ -1,15 +1,18 @@
-import Image from 'next/image'
-import React from 'react'
-import { Header } from '../src/components/header/header'
-import { PageHero } from '../src/components/pageHero/pageHero'
+import React, { createContext, useState } from 'react'
+import Homepage from './homepage'
+import Treatments from './treatments';
+export const Context = createContext();
 
-const homepage = () => {
+const Index = () => {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
-        <div className='w-full'>
-            <Header />
-            <PageHero />
-        </div>
+        <Context.Provider value={{
+            menuOpen, setMenuOpen
+        }}>
+            <Homepage />
+            {/* <Treatments /> */}
+        </Context.Provider>
     )
 }
 
-export default homepage
+export default Index
