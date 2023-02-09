@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-.countryBack {
+.countryBack1 {
     background-image: linear-gradient(to right, #ffffff, #f6f5fd, #f6f5fd, #f6f5fd, #e5e0f8, #dcd6f6, #dcd6f6, #f6f5fd, #f6f5fd, #f6f5fd, #f6f5fd, #ffffff);
+}
+
+.countryBack2 {
+    background-image: linear-gradient(to right, #FFFFFF 20%, #D949495F, white 80%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+select {
+    appearance: none;
+    background: transparent;
+    background-image: url("../public/assets/selectArrow.svg");
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    background-position-y: 10px;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    margin-right: 2rem;
+    padding: 1rem;
+    padding-right: 2rem;
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.selectedPage {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.unselectedPage {
+    color: #FFFFFF80;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.unselectedPage:hover {
+    border-bottom: 3px solid #fff;
+    margin-bottom: -3px;
 }

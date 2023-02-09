@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import PageHero from '../src/components/pageHero'
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs"
-import PageContainer from '../src/components/pageContainer'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
 import "swiper/css/pagination";
@@ -126,7 +125,7 @@ const Homepage = () => {
 
 
     return (
-        <PageContainer>
+        <>
             <Swiper
                 autoplay={{
                     delay: 7000,
@@ -394,7 +393,7 @@ const Homepage = () => {
                     <button className='self-center bg-gradient-to-r from-[#E1C75C] to-[#C2A013] text-white rounded-lg w-[91%] md:w-[299.72px] py-3 my-7 mb-10 font-semibold hover:bg-gradient-to-l'>LOAD MORE COMMENTS</button>
                 </section>
             </div >
-        </PageContainer>
+        </>
     )
 }
 

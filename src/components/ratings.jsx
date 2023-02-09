@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RatingHeader = () => {
+const Ratings = () => {
     return (
         <div className='hidden tb:flex flex-row items-center justify-between bg-[#3F3F3F42] w-[88%] rounded-b-lg px-3 mr-[50px] z-10 absolute'
             style={{
@@ -29,4 +29,4 @@ const RatingHeader = () => {
     )
 }
 
-export default RatingHeader
+export default Ratings

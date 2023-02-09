@@ -2,12 +2,24 @@ import React, { useState } from 'react'
 import { FaBars } from "react-icons/fa"
 import { TfiClose } from "react-icons/tfi"
 import { useContext } from 'react'
-import { Context } from '../../pages'
+import { Context } from '../../pages/_app'
+import Headroom from 'react-headroom'
+import Ratings from './ratings'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
-const Menu = () => {
+const Header = () => {
     const { menuOpen, setMenuOpen } = useContext(Context);
+    const router = useRouter()
+
+    const handlePageChange = (event) => {
+        setMenuOpen(false);
+        console.log(router.asPath);
+    }
     return (
-        <>
+        // <Headroom>
+        <header>
+            <Ratings />
             {menuOpen && <div className='tb:hidden bg-[#9686DA]  text-[#000] fixed z-20 top-[49px]   flex flex-col items-center justify-start menu h-full w-full'>
                 <div className='flex flex-col justify-center xs:flex-row xs:justify-start items-center bg-[#7F73B1] w-full px-[10px]'>
                     <div className='flex flex-row items-center'>
@@ -17,11 +29,21 @@ const Menu = () => {
                     <span className='text-white text-[14px] mt-[7px]  xs:mb-1'>4.5 rating of 25 reviews </span>
                 </div>
                 <div className='flex flex-col space-y-2 items-center w-full'>
-                    <span onClick={() => setMenuOpen(false)} className="text-[#FFF] font-medium text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:mb-[-3px] p-1 w-fit flex flex-col items-center">HOME</span>
-                    <span onClick={() => setMenuOpen(false)} className="text-[#FFFFFF80] text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">TREATMENTS</span>
-                    <span onClick={() => setMenuOpen(false)} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">PRODUCTS</span>
-                    <span onClick={() => setMenuOpen(false)} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">CONTACT US</span>
-                    <span onClick={() => setMenuOpen(false)} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">FAQ</span>
+                    <Link href="/">
+                        <span onClick={() => handlePageChange("Home")} className="text-[#FFF] font-medium text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:mb-[-3px] p-1 w-fit flex flex-col items-center">HOME</span>
+                    </Link>
+                    <Link href="/treatments">
+                        <span onClick={() => handlePageChange("Treatments")} className="text-[#FFFFFF80] text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">TREATMENTS</span>
+                    </Link>
+                    <Link href="/products">
+                        <span onClick={() => handlePageChange("Products")} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">PRODUCTS</span>
+                    </Link>
+                    <Link href="/contactus">
+                        <span onClick={() => handlePageChange("Contact")} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">CONTACT US</span>
+                    </Link>
+                    <Link href="/faq">
+                        <span onClick={() => handlePageChange("Faq")} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">FAQ</span>
+                    </Link>
                 </div>
                 <div className='flex flex-col items-center absolute bottom-3 w-full'>
                     <div className='flex flex-row space-x-4'>
@@ -49,11 +71,21 @@ const Menu = () => {
                     <span className='hidden tb:flex text-white font-medium text-[22px] '>TREATMENTS</span>
                 </div>
                 <div className='hidden tb:flex flex-row items-center space-x-4 md:mr-[85px] xxl:absolute right-[100px]'>
-                    <span className='text-white text-[16px] font-medium hover:cursor-pointer'>HOME</span>
-                    <span className='text-[#FFFFFF80] text-[16px] border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] cursor-pointer'>TREATMENTS</span>
-                    <span className='text-[#FFFFFF80] text-[16px] border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] cursor-pointer'>PRODUCTS</span>
-                    <span className='text-[#FFFFFF80] text-[16px] border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] cursor-pointer'>CONTACT US</span>
-                    <span className='text-[#FFFFFF80] text-[16px] border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] cursor-pointer'>FAQ</span>
+                    <Link href="/">
+                        <span onClick={() => handlePageChange("Home")} className='selectedPage '>HOME</span>
+                    </Link>
+                    <Link href="/treatments">
+                        <span onClick={() => handlePageChange("Treatments")} className='unselectedPage'>TREATMENTS</span>
+                    </Link>
+                    <Link href="/products">
+                        <span onClick={() => handlePageChange("Products")} className='unselectedPage'>PRODUCTS</span>
+                    </Link>
+                    <Link href="/contactus">
+                        <span onClick={() => handlePageChange("Contacts")} className='unselectedPage'>CONTACT US</span>
+                    </Link>
+                    <Link href="/faq">
+                        <span onClick={() => handlePageChange("Faq")} className='unselectedPage'>FAQ</span>
+                    </Link>
                 </div>
                 <div className='bg-[#9686DA] tb:hidden flex flex-row items-center justify-between fixed top-0 left-0 z-20 pt-5 w-full' >
                     <div className='absolute flex flex-row justify-between top-0 px-4 py-3 bg-[#6C5EA4] w-full'>
@@ -68,7 +100,9 @@ const Menu = () => {
                     </div>
                 </div>
             </div>
-        </>)
+        </header>
+        // </Headroom>
+    )
 }
 
-export default Menu
+export default Header

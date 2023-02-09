@@ -1,17 +1,12 @@
-import React, { createContext, useState } from 'react'
+import React, { useState, useContext } from 'react'
 import Homepage from './homepage'
-import Treatments from './treatments';
-export const Context = createContext();
+import { Context } from './_app'
 
 const Index = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
+    const { page } = useContext(Context);
     return (
-        <Context.Provider value={{
-            menuOpen, setMenuOpen
-        }}>
-            <Homepage />
-            {/* <Treatments /> */}
-        </Context.Provider>
+        <Homepage />
+
     )
 }
 
