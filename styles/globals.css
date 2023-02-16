@@ -33,21 +33,13 @@ textarea {
     resize: none;
 }
 
-.selectedPage {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.unselectedPage {
+.links {
     color: #FFFFFF80;
     font-size: 16px;
-    border: none;
     cursor: pointer;
 }
 
-.unselectedPage:hover {
+.links:hover {
     border-bottom: 3px solid #fff;
     margin-bottom: -3px;
 }

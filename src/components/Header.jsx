@@ -6,15 +6,14 @@ import { Context } from '../../pages/_app'
 import Headroom from 'react-headroom'
 import Ratings from './ratings'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
 
 const Header = () => {
     const { menuOpen, setMenuOpen } = useContext(Context);
-    const router = useRouter()
+    const [page, setPage] = useState("Home");
 
-    const handlePageChange = (event) => {
+    const handlePageChange = (page) => {
         setMenuOpen(false);
-        console.log(router.asPath);
+        setPage(page);
     }
     return (
         // <Headroom>
@@ -30,19 +29,19 @@ const Header = () => {
                 </div>
                 <div className='flex flex-col space-y-2 items-center w-full'>
                     <Link href="/">
-                        <span onClick={() => handlePageChange("Home")} className="text-[#FFF] font-medium text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:mb-[-3px] p-1 w-fit flex flex-col items-center">HOME</span>
+                        <span onClick={() => handlePageChange("Home")} className={`${page === "Home" ? "text-[#FFF] font-medium" : "text-[#FFFFFF80]"}  text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:mb-[-3px] p-1 w-fit flex flex-col items-center`}>HOME</span>
                     </Link>
                     <Link href="/treatments">
-                        <span onClick={() => handlePageChange("Treatments")} className="text-[#FFFFFF80] text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">TREATMENTS</span>
+                        <span onClick={() => handlePageChange("Treatments")} className={`${page === "Treatments" ? "text-[#FFF] font-medium" : "text-[#FFFFFF80]"} text-[18px] mt-3 cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center`}>TREATMENTS</span>
                     </Link>
                     <Link href="/products">
-                        <span onClick={() => handlePageChange("Products")} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">PRODUCTS</span>
+                        <span onClick={() => handlePageChange("Products")} className={`${page === "Products" ? "text-[#FFF] font-medium" : "text-[#FFFFFF80]"} text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center`}>PRODUCTS</span>
                     </Link>
                     <Link href="/contactus">
-                        <span onClick={() => handlePageChange("Contact")} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">CONTACT US</span>
+                        <span onClick={() => handlePageChange("Contact")} className={`${page === "Contact" ? "text-[#FFF] font-medium" : "text-[#FFFFFF80]"} text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center`}>CONTACT US</span>
                     </Link>
                     <Link href="/faq">
-                        <span onClick={() => handlePageChange("Faq")} className="text-[#FFFFFF80] text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center">FAQ</span>
+                        <span onClick={() => handlePageChange("Faq")} className={`${page === "Faq" ? "text-[#FFF] font-medium" : "text-[#FFFFFF80]"} text-[18px] mt-3  cursor-pointer border-hidden border-b-[3px] border-b-[#fff] hover:border-solid hover:mb-[-3px] p-1 w-fit flex flex-col items-center`}>FAQ</span>
                     </Link>
                 </div>
                 <div className='flex flex-col items-center absolute bottom-3 w-full'>
@@ -72,19 +71,19 @@ const Header = () => {
                 </div>
                 <div className='hidden tb:flex flex-row items-center space-x-4 md:mr-[85px] xxl:absolute right-[100px]'>
                     <Link href="/">
-                        <span onClick={() => handlePageChange("Home")} className='selectedPage '>HOME</span>
+                        <span onClick={() => handlePageChange("Home")} className={`links ${page === "Home" && "text-[#fff"}`}>HOME</span>
                     </Link>
                     <Link href="/treatments">
-                        <span onClick={() => handlePageChange("Treatments")} className='unselectedPage'>TREATMENTS</span>
+                        <span onClick={() => handlePageChange("Treatments")} className='links'>TREATMENTS</span>
                     </Link>
                     <Link href="/products">
-                        <span onClick={() => handlePageChange("Products")} className='unselectedPage'>PRODUCTS</span>
+                        <span onClick={() => handlePageChange("Products")} className='links'>PRODUCTS</span>
                     </Link>
                     <Link href="/contactus">
-                        <span onClick={() => handlePageChange("Contacts")} className='unselectedPage'>CONTACT US</span>
+                        <span onClick={() => handlePageChange("Contacts")} className='links'>CONTACT US</span>
                     </Link>
                     <Link href="/faq">
-                        <span onClick={() => handlePageChange("Faq")} className='unselectedPage'>FAQ</span>
+                        <span onClick={() => handlePageChange("Faq")} className='links'>FAQ</span>
                     </Link>
                 </div>
                 <div className='bg-[#9686DA] tb:hidden flex flex-row items-center justify-between fixed top-0 left-0 z-20 pt-5 w-full' >
