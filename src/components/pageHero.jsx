@@ -3,7 +3,7 @@ import React from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { useSwiper } from "swiper/react";
 
-function PageHero({ children, background, mobileBackground }) {
+function PageHero({ background, mobileBackground }) {
   const swiper = useSwiper();
   return (
     <div className="flex flex-col w-full h-full">
@@ -28,22 +28,58 @@ function PageHero({ children, background, mobileBackground }) {
             />
           </div>
 
-          <div className="flex flex-col items-center  pt-20 top-0 absolute tb:top-[50px] w-full h-full lg:ml-[70px]">
-            {children}
-            {background !== "/assets/productsHero.svg" &&
-              background !== "/assets/contactHero.svg" && (
-                <div className="flex flex-col flex-wrap  items-center md:self-start">
-                  <div className="flex flex-col md:flex-row flex-wrap  items-center w-full justify-center md:justify-start md:pl-[13px] mt-10 ft:mt-[80px]">
-                    <button className="bg-white text-[#796AB8] rounded-lg py-3 px-7 w-[249.61px] border-[1px] md:border-[0] font-bold hover:bg-[#ddd] md:mr-[30px] mb-[30px]">
-                      VIEW TREATMENTS
-                    </button>
-                    <button className="bg-gradient-to-r from-[#E1C75C] to-[#C2A013] text-[#fff] rounded-lg py-3 px-7 w-[249.61px] font-bold hover:bg-gradient-to-l md:mr-[30px] mb-[30px]">
-                      VIEW PRODUCTS
-                    </button>
+          {background !== "/assets/contactHero.svg" ? (
+            <div className="flex flex-col items-center  pt-20 top-0 absolute tb:top-[50px] w-full h-full lg:ml-[70px]">
+              <div className="self-center text-center md:text-start md:self-start  md:pl-[20px] mt-3 md:mt-4 w-full">
+                <span className="text-white text-[60px] tb:text-[75px] font-bold leading-none">
+                  ALL YOU NEED <br />
+                  TO BE EPIC
+                </span>
+                <p className="md:max-w-[550px] text-[17px] md:text-[20px] text-white mt-10 px-4 md:px-[0px] md:mt-5">
+                  If your skin has started to show wear and tear from sun,
+                  aging, acne or other skin conditions there is much that can be
+                  done.
+                </p>
+              </div>
+              {background !== "/assets/productsHero.svg" &&
+                background !== "/assets/contactHero.svg" && (
+                  <div className="flex flex-col flex-wrap  items-center md:self-start">
+                    <div className="flex flex-col md:flex-row flex-wrap  items-center w-full justify-center md:justify-start md:pl-[13px] mt-10 ft:mt-[80px]">
+                      <button className="bg-white text-[#796AB8] rounded-lg py-3 px-7 w-[249.61px] border-[1px] md:border-[0] font-bold hover:bg-[#ddd] md:mr-[30px] mb-[30px]">
+                        VIEW TREATMENTS
+                      </button>
+                      <button className="bg-gradient-to-r from-[#E1C75C] to-[#C2A013] text-[#fff] rounded-lg py-3 px-7 w-[249.61px] font-bold hover:bg-gradient-to-l md:mr-[30px] mb-[30px]">
+                        VIEW PRODUCTS
+                      </button>
+                    </div>
                   </div>
+                )}
+            </div>
+          ) : (
+            <div className="flex flex-col  pt-20 top-0 absolute tb:top-[50px] w-full h-full lg:ml-[70px]">
+              <div className="self-center text-center md:text-start md:self-start  md:pl-[28px] mt-3 md:mt-4 w-full">
+                <span className="text-white text-[60px] tb:text-[75px] font-bold leading-none uppercase">
+                  Contact us <br />
+                  if you need help
+                </span>
+                <p className="md:max-w-[550px] text-[17px] md:text-[17px] text-white mt-10 px-4 md:px-[0px] md:mt-5">
+                  We may have already answered your questions in our FAQ
+                  section, but if you can&apos;t find the answer you&apos;re
+                  looking for, please get in touch with us.
+                </p>
+              </div>
+              <div className="flex flex-col flex-wrap  items-center">
+                <div className="flex flex-col md:flex-row flex-wrap  items-center w-full justify-center md:justify-start md:pl-[30px] mt-10 ft:mt-[80px]">
+                  <button className="bg-white text-[#796AB8] rounded-lg py-3 px-7 w-[249.61px] border-[1px] md:border-[0] font-bold hover:bg-[#ddd] md:mr-[30px] mb-[30px] uppercase">
+                    Track order
+                  </button>
+                  <button className="bg-gradient-to-r from-[#E1C75C] to-[#C2A013] text-[#fff] rounded-lg py-3 px-7 font-bold hover:bg-gradient-to-l md:mr-[30px] mb-[30px] uppercase">
+                    Reschedule appointment
+                  </button>
                 </div>
-              )}
-          </div>
+              </div>
+            </div>
+          )}
 
           {background !== "/assets/contactHero.svg" && (
             <div

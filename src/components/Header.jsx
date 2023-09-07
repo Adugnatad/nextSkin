@@ -15,6 +15,7 @@ const Header = () => {
     setMenuOpen(false);
     setPage(page);
   };
+  console.log(page);
   return (
     // <Headroom>
     <header>
@@ -127,7 +128,9 @@ const Header = () => {
           <Link href="/">
             <span
               onClick={() => handlePageChange("Home")}
-              className={`links ${page === "Home" && "text-[#fff"}`}
+              className={`links ${
+                page === "Home" && "border-b-[3px] border-[#fff] "
+              }`}
             >
               HOME
             </span>
@@ -135,7 +138,9 @@ const Header = () => {
           <Link href="/treatments">
             <span
               onClick={() => handlePageChange("Treatments")}
-              className="links"
+              className={`links ${
+                page === "Treatments" && "border-b-[3px] border-[#fff] "
+              }`}
             >
               TREATMENTS
             </span>
@@ -143,7 +148,9 @@ const Header = () => {
           <Link href="/products">
             <span
               onClick={() => handlePageChange("Products")}
-              className="links"
+              className={`links ${
+                page === "Products" && "border-b-[3px] border-[#fff] "
+              }`}
             >
               PRODUCTS
             </span>
@@ -151,7 +158,9 @@ const Header = () => {
           <Link href="/contactus">
             <span
               onClick={() => handlePageChange("Contacts")}
-              className="links"
+              className={`links ${
+                page === "Contacts" && "border-b-[3px] border-[#fff] "
+              }`}
             >
               CONTACT US
             </span>

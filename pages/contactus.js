@@ -10,36 +10,10 @@ import Slider from "../components/slider";
 const Contact = () => {
   return (
     <>
-      {/* <Slider main={"Contact"} /> */}
-
       <PageHero
         background={"/assets/contactHero.svg"}
         mobileBackground="/assets/mobileBackgroundSvg.svg"
-      >
-        <div className="self-center md:self-start md:ml-[70px]">
-          <div className="self-center text-center md:text-start md:self-start  md:pl-[28px] mt-3 md:mt-4 w-full">
-            <span className="text-white text-[60px] tb:text-[75px] font-bold leading-none uppercase">
-              Contact us <br />
-              if you need help
-            </span>
-            <p className="md:max-w-[550px] text-[17px] md:text-[17px] text-white mt-10 px-4 md:px-[0px] md:mt-5">
-              We may have already answered your questions in our FAQ section,
-              but if you can&apos;t find the answer you&apos;re looking for,
-              please get in touch with us.
-            </p>
-          </div>
-          <div className="flex flex-col flex-wrap  items-center">
-            <div className="flex flex-col md:flex-row flex-wrap  items-center w-full justify-center md:justify-start md:pl-[30px] mt-10 ft:mt-[80px]">
-              <button className="bg-white text-[#796AB8] rounded-lg py-3 px-7 w-[249.61px] border-[1px] md:border-[0] font-bold hover:bg-[#ddd] md:mr-[30px] mb-[30px] uppercase">
-                Track order
-              </button>
-              <button className="bg-gradient-to-r from-[#E1C75C] to-[#C2A013] text-[#fff] rounded-lg py-3 px-7 font-bold hover:bg-gradient-to-l md:mr-[30px] mb-[30px] uppercase">
-                Reschedule appointment
-              </button>
-            </div>
-          </div>
-        </div>
-      </PageHero>
+      ></PageHero>
 
       <div className="grid grid-cols-1 tb:grid-cols-2 text-center w-full">
         <div className="flex flex-col items-start tb:ml-20 tb:mr-10 px-10 p-5">
