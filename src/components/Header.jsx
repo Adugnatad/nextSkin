@@ -9,7 +9,7 @@ import Link from "next/link";
 
 const Header = () => {
   const { menuOpen, setMenuOpen } = useContext(Context);
-  const [page, setPage] = useState("Home");
+  const [page, setPage] = useState("");
 
   const handlePageChange = (page) => {
     setMenuOpen(false);
@@ -165,9 +165,6 @@ const Header = () => {
               CONTACT US
             </span>
           </Link>
-          {/* <Link href="/faq">
-                        <span onClick={() => handlePageChange("Faq")} className='links'>FAQ</span>
-                    </Link> */}
         </div>
         <div className="bg-[#9686DA] tb:hidden flex flex-row items-center justify-between fixed top-0 left-0 z-20 pt-5 w-full">
           <div className="absolute flex flex-row justify-between top-0 px-4 py-3 bg-[#6C5EA4] w-full">

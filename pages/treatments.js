@@ -35,9 +35,9 @@ const Treatments = () => {
         <p className="my-5">
           Any purchase of treatments above 249£ comes with free consultation.
         </p>
-        <div className="flex flex-row overflow-x-auto scrolling-touch scrollbar-hide px-3 w-full tb:w-fit tb:grid tb:grid-cols-3">
+        <div className="flex flex-row overflow-x-auto scrolling-touch tb:scrollbar-hide md:scrollbar-show px-3 w-full tb:w-fit tb:grid tb:grid-cols-3">
           <div className="flex flex-row items-center mr-[25px]">
-            <div className="flex flex-col items-start  w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C] mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start  md:w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C] mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/lipFiller.svg" className="mb-3" />
               <span className="text-[20px] font-bold">LIP FILLER</span>
               <span className="text-[#C6C6C6] text-[14px]">
@@ -63,7 +63,7 @@ const Treatments = () => {
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center mr-[25px]">
-            <div className="flex flex-col items-start w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start md:w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/lipFiller.svg" className="mb-3" />
               <span className="text-[20px] font-bold">LIP FILLER</span>
               <span className="text-[#C6C6C6] text-[14px]">
@@ -89,7 +89,7 @@ const Treatments = () => {
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center md:pr-4 pr-1">
-            <div className="flex flex-col items-start w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start md:w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/lipFiller.svg" className="mb-3" />
               <span className="text-[20px] font-bold">LIP FILLER</span>
               <span className="text-[#C6C6C6] text-[14px]">
@@ -115,7 +115,7 @@ const Treatments = () => {
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center md:pr-4 pr-1">
-            <div className="flex flex-col items-start w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start md:w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/needles.svg" className="mb-3" />
               <span className="text-[20px] font-bold">ARMPIT FILLER</span>
               <span className="text-[#C6C6C6] text-[14px]">
@@ -142,7 +142,7 @@ const Treatments = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center md:mt-[20px] w-full">
+      <div className="flex flex-col items-center mt-[20px] w-full">
         <div className="countryBack2 p-4 w-[90%] text-center">
           <span className="uppercase text-[#DA4B4B] font-semibold">
             london, united kingdom
@@ -164,9 +164,9 @@ const Treatments = () => {
         <p className="my-5">
           Any purchase of treatments above 249£ comes with free consultation.
         </p>
-        <div className="flex flex-row overflow-x-auto scrolling-touch scrollbar-hide px-3 w-full tb:w-fit tb:grid tb:grid-cols-3">
+        <div className="flex flex-row overflow-x-auto scrolling-touch tb:scrollbar-hide md:scrollbar-show px-3 w-full tb:w-fit tb:grid tb:grid-cols-3">
           <div className="flex flex-row items-center mr-[25px]">
-            <div className="flex flex-col items-start  w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C] mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start  md:w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C] mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/DENTAL.svg" className="mb-3 self-center" />
               <span className="text-[20px] font-bold uppercase">
                 Dental treatments COnsultation
@@ -194,7 +194,7 @@ const Treatments = () => {
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center mr-[25px]">
-            <div className="flex flex-col items-start w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start md:w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/BREAST.svg" className="mb-3 self-center" />
               <span className="text-[20px] font-bold uppercase">
                 Breast implants COnsultation
@@ -222,7 +222,7 @@ const Treatments = () => {
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center md:pr-4 pr-1">
-            <div className="flex flex-col items-start w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start md:w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/BUTT.svg" className="mb-3 self-center" />
               <span className="text-[20px] font-bold uppercase">
                 Brazilian Bum Lift COnsultation
@@ -250,7 +250,7 @@ const Treatments = () => {
             </div>
           </div>
           <div className="flex flex-row space-x-4 items-center md:pr-4 pr-1">
-            <div className="flex flex-col items-start w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+            <div className="flex flex-col items-start md:w-[400px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
               <img src="/assets/HAIR.svg" className="mb-3 self-center" />
               <span className="text-[20px] font-bold uppercase">
                 hair transplant COnsultation

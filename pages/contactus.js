@@ -13,6 +13,7 @@ const Contact = () => {
       <PageHero
         background={"/assets/contactHero.svg"}
         mobileBackground="/assets/mobileBackgroundSvg.svg"
+        page="contactus"
       ></PageHero>
 
       <div className="grid grid-cols-1 tb:grid-cols-2 text-center w-full">

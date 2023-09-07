@@ -3,7 +3,7 @@ import React from "react";
 import { BsChevronLeft, BsChevronRight } from "react-icons/bs";
 import { useSwiper } from "swiper/react";
 
-function PageHero({ background, mobileBackground }) {
+function PageHero({ background, mobileBackground, page }) {
   const swiper = useSwiper();
   return (
     <div className="flex flex-col w-full h-full">
@@ -32,8 +32,23 @@ function PageHero({ background, mobileBackground }) {
             <div className="flex flex-col items-center  pt-20 top-0 absolute tb:top-[50px] w-full h-full lg:ml-[70px]">
               <div className="self-center text-center md:text-start md:self-start  md:pl-[20px] mt-3 md:mt-4 w-full">
                 <span className="text-white text-[60px] tb:text-[75px] font-bold leading-none">
-                  ALL YOU NEED <br />
-                  TO BE EPIC
+                  {page === "Homepage" ? (
+                    <>
+                      ALL YOU NEED <br />
+                      TO BE EPIC{" "}
+                    </>
+                  ) : page === "Treatement" ? (
+                    <>
+                      PROMOTION <br /> DERMAL FILLERS
+                    </>
+                  ) : page === "Product" ? (
+                    <>
+                      REVOLAX <br />
+                      DEEP WITH LIDOCAINE{" "}
+                    </>
+                  ) : (
+                    <> </>
+                  )}
                 </span>
                 <p className="md:max-w-[550px] text-[17px] md:text-[20px] text-white mt-10 px-4 md:px-[0px] md:mt-5">
                   If your skin has started to show wear and tear from sun,

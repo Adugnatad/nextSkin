@@ -31,12 +31,18 @@ const Slider = ({ main }) => {
           <PageHero
             background={backgrounds[main]}
             mobileBackground="/assets/mobileBackgroundSvg.svg"
+            page={main}
           ></PageHero>
         </SwiperSlide>
         <SwiperSlide>
           <PageHero
-            background="/assets/treatementsHeroSvg.svg"
+            background={
+              main !== "Treatement"
+                ? "/assets/treatementsHeroSvg.svg"
+                : "/assets/homepageHeroSvg.svg"
+            }
             mobileBackground="/assets/mobileBackgroundSvg.svg"
+            page={main}
           ></PageHero>
         </SwiperSlide>
       </Swiper>

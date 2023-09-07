@@ -165,7 +165,7 @@ const Homepage = () => {
                 size={25}
                 className="hidden md:flex border-[1px] rounded-[50%] w-[40px] h-[40px] p-2 cursor-pointer hover:border-[#E8C229] hover:text-[#E8C229] navigationIcons mr-5"
               />
-              <div className="flex flex-col items-start  w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C] mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+              <div className="flex flex-col items-start  md:w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px]  border-solid hover:border-[#E1C75C] mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
                 <img src="/assets/sunScreenSvg.svg" className="mb-3" />
                 <span className="text-[20px] font-bold">
                   BIO WATERY SUN CREAM
@@ -193,7 +193,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="flex flex-row space-x-4 items-center mr-[25px]">
-              <div className="flex flex-col items-start w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+              <div className="flex flex-col items-start md:w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
                 <img src="/assets/sunScreenSvg.svg" className="mb-3" />
                 <span className="text-[20px] font-bold">
                   BIO WATERY SUN CREAM
@@ -221,7 +221,7 @@ const Homepage = () => {
               </div>
             </div>
             <div className="flex flex-row space-x-4 items-center md:pr-4 pr-1">
-              <div className="flex flex-col items-start w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
+              <div className="flex flex-col items-start md:w-[365px] px-3 py-4 hover:bg-[#E1C75C1A] rounded-[20px] border-[1px] border-transparent border-solid hover:border-[#E1C75C]  mb-[30px] shadow-[0_3px_10px_rgb(0,0,0,0.2)] cursor-pointer">
                 <img src="/assets/sunScreenSvg.svg" className="mb-3" />
                 <span className="text-[20px] font-bold">
                   BIO WATERY SUN CREAM
